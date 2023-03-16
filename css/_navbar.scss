@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700;900&display=swap');
+
+.navbar-bg{
+    width: 99.07vw;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0.481);
+    z-index: 2;
+    backdrop-filter: blur(7px);
+    // border: 2px solid green;
+    position: fixed;
+    box-sizing: border-box;
+    
+}
+
+.navbar-container{
+    width: 90%;
+    height: 10rem;
+    height: 100%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.481);
+    z-index: 5; 
+
+    box-sizing: border-box;
+
+    
+    // border: 2px solid greenyellow;
+}
+
+
+
+.navbar-logo img{
+    display: inline-block;
+    height: 8rem;
+    // margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+.navbar-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center center;
+}
+
+
+.navbar-btns{
+    place-self: center start;
+    margin-left: 10rem;
+}
+
+.navbar-btns ul{
+    display: flex;
+
+    li{
+        margin-right: 4rem;
+        a{
+            font-size: 1.7rem;
+            // padding-right: 2rem;
+            text-align: center;
+            color: $color3;
+            transition: color 0.4s ease-in-out;
+        }
+
+        a:hover{
+            color: $color2;
+        }
+    }
+}
+
+
+
+
+
+/////// Css Navbar Btn
+
+.navbar-button{
+    place-self: center end;
+    margin-right: 10rem;
+}
+
+
+.navbar-btn-container {
+    width: 28rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 2px solid coral;
+    // border: 2px solid green; 
+  
+    // margin: auto;
+    // margin-top: 20%;
+    position: relative;
+    /* overflow: hidden; */
+    // place-self: center end;
+  }
+
+
+  .navbar-btn a{
+      color: white;
+      font-weight: 300;
+      font-family: 'Poppins', sans-serif; 
+      text-decoration-line: none;
+  }
+  
+  .navbar-btn {
+    position: relative;
+    padding: 1rem 4rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    border: none;
+    background-image: linear-gradient(to right, #000000, #131313);
+    cursor: pointer;
+    /* border-left: 5px solid transparent;
+    border-right: 5px solid transparent; */
+    border-top: none;
+    /* border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 0, 0)) 1; */
+    border-bottom: none;
+    overflow: hidden;
+  
+    border-left: none;
+    border-right: none;
+  
+    transition: border-left 0.3s ease, border-right 0.3s ease;
+    
+  }
+  
+  .navbar-btn:hover {
+    border-left: 5px solid red;
+    border-right: 5px solid red;
+  }
+  
+  .navbar-btn::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: -10%;
+    width: 80px;
+    height: 100%;
+    border: none;
+    transform: skew(30deg);
+    border-right: none;
+    border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 0, 0)) 1;
+  
+    transition: border 0.3s ease-in-out, border-right 0.3s ease-in-out;
+  }
+  
+  .navbar-btn:hover::before {
+    border: 5px solid rgb(255, 0, 166);
+    border-image: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 0, 0)) 1;
+    border-right: none;
+  }
+  
+  .navbar-btn::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    right: -10%;
+    width: 80px;
+    height: 100%;
+    border: none;
+    transform: skew(30deg);
+    border-left: none;
+    border-image: linear-gradient(to left, rgb(255, 0, 0), rgb(0, 0, 0)) 1;
+      
+    transition: border 0.3s ease-in-out, border-left 0.3s ease-in-out;
+  }
+  
+  .navbar-btn:hover::after {
+    border: 5px solid transparent;
+    border-image: linear-gradient(to left, rgb(255, 0, 0), rgb(0, 0, 0)) 1;
+    border-left: none;
+  }
+  
+  .navbar-btn-bg1 {
+    position: absolute;
+    width: 6rem;
+    height: 4.5rem;
+    border: 2px solid purple;
+    top: 24%;
+    left: 1%;
+    background-color: red;
+  
+    filter: blur(12px);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-btn-bg2 {
+    position: absolute;
+    width: 6rem;
+    height: 4.5rem;
+    border: 2px solid purple;
+    top: 24%;
+    right: 1%;
+    background-color: red;
+  
+    filter: blur(12px);
+    z-index: -2;
+  
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
